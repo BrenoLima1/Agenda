@@ -1,2 +1,2 @@
 # Agenda
-Agenda criada com Python (utilizando Django)
+Agenda criada com Python (utilizando Django) - Em produção
