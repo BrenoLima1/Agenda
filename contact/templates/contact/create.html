@@ -51,4 +51,12 @@
 
     </form>
   </div>
+  <script type="text/javascript">
+    document.querySelector('input[name="picture"]').onchange = function() {
+      if (this.files && this.files[0]) {
+        const img = document.querySelector('img');
+        img.src = URL.createObjectURL(this.files[0]);
+      }
+    }
+  </script>
 {% endblock content %}
