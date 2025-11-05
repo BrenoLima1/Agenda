@@ -1,14 +1,6 @@
-{% extends 'global/base.html' %}
-
-{% block content %}
-  <div class="form-wrapper">
-
-    <h2>Contact</h2>
-
     <form
       action="{{form_action}}"
       method="POST"
-      enctype="multipart/form-data"
     >
       {% csrf_token %}
 
@@ -17,12 +9,6 @@
        {% for field in form %}
   <div class="form-group">
     <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-
-    {% if field.name == "picture" and field.value %}
-      <div class="mb-2">
-        <img src="{{ field.value.url }}" alt="Imagem atual" width="150">
-      </div>
-    {% endif %}
 
     {{ field }}
     {{ field.errors }}
@@ -50,5 +36,3 @@
       </div>
 
     </form>
-  </div>
-{% endblock content %}
